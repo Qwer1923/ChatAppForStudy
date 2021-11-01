@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatInputAccessoryView" customModule="ChatAppWithFirebase" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTextView" destination="AtR-Uz-Yla" id="4Wl-uY-bxS"/>
+                <outlet property="sendButton" destination="g2Z-w4-BNw" id="ceG-1O-HBG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="591" height="179"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="メッセージがここに入ります。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AtR-Uz-Yla">
+                    <rect key="frame" x="10" y="10" width="521" height="125"/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2Z-w4-BNw">
+                    <rect key="frame" x="541" y="52.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="CcU-Q3-XmF"/>
+                        <constraint firstAttribute="width" constant="40" id="vLS-Jp-Z3P"/>
+                    </constraints>
+                    <state key="normal" image="send-icon"/>
+                    <connections>
+                        <action selector="tappedSendButton:" destination="-1" eventType="touchUpInside" id="U5J-cM-eE3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g2Z-w4-BNw" secondAttribute="trailing" constant="10" id="8tg-VP-KdR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AtR-Uz-Yla" secondAttribute="bottom" constant="10" id="B5x-AC-6sR"/>
+                <constraint firstItem="AtR-Uz-Yla" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="O4U-P1-TT8"/>
+                <constraint firstItem="g2Z-w4-BNw" firstAttribute="centerY" secondItem="AtR-Uz-Yla" secondAttribute="centerY" id="cNz-5w-2FG"/>
+                <constraint firstItem="g2Z-w4-BNw" firstAttribute="leading" secondItem="AtR-Uz-Yla" secondAttribute="trailing" constant="10" id="dij-mc-jFL"/>
+                <constraint firstItem="AtR-Uz-Yla" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="pUW-d6-z6E"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="265.94202898550725" y="-136.27232142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="send-icon" width="256" height="256"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
